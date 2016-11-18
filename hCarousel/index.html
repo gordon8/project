@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>hCarousel</title>
+    <link rel="stylesheet" href="css/hCarousel.css">
+    <style>
+        body, ol, li{
+            margin: 0;
+            padding: 0;
+        }
+        ol, li {
+            list-style: none;
+        }
+        #wrap {
+            width: 770px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+
+    <script src="js/lib/jquery-3.1.0.min.js"></script>
+    <script src="js/hCarousel.js"></script>
+    <script>
+        var hCarouselData = [{
+            url: 'https://github.com/gordon8',
+            img: 'img/carousel/img0.jpg'
+        }, {
+            url: 'https://github.com/gordon8',
+            img: 'img/carousel/img1.jpg'
+        }, {
+            url: 'https://github.com/gordon8',
+            img: 'img/carousel/img2.jpg'
+        }, {
+            url: 'https://github.com/gordon8',
+            img: 'img/carousel/img3.jpg'
+        }, {
+            url: 'https://github.com/gordon8',
+            img: 'img/carousel/img4.jpg'
+        }];
+
+        var hCarousel = new $.HCarousel({
+            $wrap: $('#wrap'),
+            data: hCarouselData,
+            current: 0,
+            autoPlay: true,
+            interval: 3000
+        });
+    </script>
+</body>
+</html>
