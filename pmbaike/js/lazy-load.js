@@ -30,7 +30,7 @@ define(function (require) {
 			var opts = {
 				url : 'js/php/getData.php',
 				type : 'GET',
-				dataType : 'jsonp',
+				dataType : 'json',
 				data : {
 					start : me.$loading.index(),
 					len : 3
