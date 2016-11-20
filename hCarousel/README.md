@@ -64,9 +64,9 @@
 
 ![img-item结构图](img/img-item-structure.png)
 
-```img-item```内部包含一个```img```标签和一个```class```为```img-modal```的遮照层。
+img-item内部包含一个```img```标签和一个```class```为```img-modal```的遮照层。
 
-```switch-list```结构为```ol```包着几个```li```。
+switch-list结构为```ol```包着几个```li```。
 
 ### CSS布局部分
 
@@ -76,7 +76,7 @@
 
 每个```img-item```都设置```transform```中的```perspective、rotateY、translateZ```三个属性，```perspective```是控制景深的，```rotateY```是控制图片沿着Y轴旋转的，```translateZ```改变图片在z方向的位置来产生近大远小的效果。最后给图片设置个```transition:all .8s;```，这样在切换的时候就有过渡效果了。
 
-```switch-item```默认样式为灰色的小圆，选中的```li```加个```switch-item-active```的```class```，修改背景色。
+switch-item默认样式为灰色的小圆，选中的```li```加个```switch-item-active```的```class```，修改背景色。
 
 ### JS交互部分
 
