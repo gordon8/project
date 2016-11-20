@@ -1,0 +1,351 @@
+
+
+/* 
+reset ---------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+ol, ul {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 
+page styles ---------------------------- */
+
+html, body, .page {
+    height: 100%;
+}
+body {
+    font: 14px/1.5 Arial, "Microsoft Yahei", sans-serif;
+    color: #333;
+}
+
+/* 
+nav ---------------------------- */
+.page > nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    background: hsla(0, 0%, 0%, 0.5);
+    z-index: 1;
+}
+.page > nav > ol {
+    text-align: center;
+}
+.page > nav li {
+    display: inline-block;
+}
+.page > nav a {
+    display: block;
+    padding: 5px 10px;
+    margin: 5px 0;
+    font-size: 18px;
+}
+.page > nav a:hover,
+.page > nav a.selected {
+    border-radius: 3px;
+    background: #fff;
+    color: #000;
+}
+
+.page > nav > .toggle {
+    display: none;
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    background: hsla(0, 0%, 0%, 0.5);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@media (max-width: 900px) {
+    .page > nav > .toggle {
+        display: block;
+        cursor: pointer;
+    }
+    .page > nav > ol {
+        display: none;
+    }
+    .page > nav li {
+        display: list-item;
+    }
+    .page > nav.open > ol {
+        display: block;
+    }
+}
+
+/* 
+main ---------------------------- */
+main, section {
+    height: 100%;
+}
+.page section {
+    overflow: hidden;
+    padding-top: 60px;
+    text-align: center;
+    background: #f3f3f3;
+    box-shadow: inset 0 2px 2px hsla(0, 0%, 0%, 0.25);
+}
+.page section>h1 {
+    font-size: 40px;
+}
+
+/* 
+about ---------------------------- */
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: hsl(184,65%,49%);
+}
+#about .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#about .content {
+    width: 600px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background: hsla(0, 100%, 100%, .25);
+}
+#about .content h1 {
+    font-size: 28px;
+}
+#about .content small,
+#about .content p {
+    font-size: 16px;
+}
+
+@media (max-width: 900px) {
+    #about .content {
+        width: auto;
+    }
+}
+
+/* 
+skills ---------------------------- */
+
+#skills > ul {
+    display: flex;
+    margin: 20px auto 0;
+    width: 900px;
+}
+#skills > ul > li {
+    flex: 1;
+    padding: 10px 20px;
+    border-left: 1px solid #e8e8e8;
+    transition: all 0.5s;
+}
+#skills > ul > li:first-child {
+    border-left: none;
+}
+#skills > ul > li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+#skills > ul > li:nth-child(3) {
+    transition-delay: 0.4s;
+}
+#skills > ul > li > h2 {
+    margin-bottom: 20px;
+} 
+#skills > ul > li li {
+    margin: 20px 0;
+    text-align: left;
+}
+
+#skills.current > ul > li {
+    transform: translateY(30px);
+} 
+#skills.leave > ul > li {
+    transform: translateY(0px);
+}
+
+#skills > ul img {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 900px) {
+    #skills {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: auto;
+    }
+    #skills > ul {
+        display: block;
+        width: auto;
+    }
+    #skills > ul > li li {
+        text-align: center;
+    }
+}
+
+/* 
+projects ---------------------------- */
+
+#projects > ul {
+    margin: 20px auto 0;
+    width: 760px;
+}
+
+#projects > ul > li {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 350px;
+    height: 210px;
+    margin-bottom: 20px;
+    transition: all .3s ease-in;
+}
+
+#projects > ul > li:nth-child(3),
+#projects > ul > li:nth-child(4) {
+    transition-delay: 0.2s;
+}
+
+#projects.current > ul > li {
+    transform: translateX(0px);
+}
+#projects.leave > ul > li {
+    transform: translateX(-30px);
+}
+#projects.leave > ul > li:nth-child(2n) {
+    transform: translateX(30px);
+}
+
+#projects > ul > li:nth-child(2n) {
+    float: right;
+}
+#projects > ul img {
+    width: 350px;
+    height: 210px;
+    transform: scale(1);
+    transition: all .3s ease-in;
+}
+#projects > ul > li:hover img{
+    transform: scale(1.5);
+}
+#projects .pro-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 10px 20px;
+    text-align: left;
+    color: #fff;
+    background: rgba(0,0,0,.7); 
+    transform: translateY(160px);
+    transition: all .3s ease-in;
+} 
+#projects .pro-info h2 {
+    margin-bottom: 20px;
+    transition: all .3s ease-in;
+}
+#projects > ul > li:hover .pro-info {
+    transform: translateY(0);
+}
+@media (max-width: 900px) {
+
+
+    #projects {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: auto;
+    }
+    #projects > ul {
+        width: auto;
+    }
+    #projects.leave > ul > li:nth-child(n),
+    #projects.current > ul > li:nth-child(n) {
+        float: none;
+        margin: 20px auto;
+        transform: translateX(0px);
+    }
+}
+
+
+
+/* 
+contact ---------------------------- */
+#contact .content {
+    display: flex;
+    flex-direction: row;
+    margin: 100px auto 0;
+    width: 900px;
+}
+#contact > .content > h1 {
+    flex: 1;
+    text-align: left;
+    font-size: 48px;
+    transition: all 0.5s;
+}
+#contact > .content > ul {
+    flex: 1;
+    padding-left: 100px;
+    text-align: left;
+    transition: all 0.5s;
+}
+#contact > .content > ul > li {
+    margin-bottom: 20px;
+}
+#contact a {
+    font-size: 16px;
+}
+#contact > .content img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle; 
+}
+#contact.current > .content > h1 {
+    transform: translateX(0px);
+}
+#contact.leave > .content > h1 {
+    transform: translateX(-30px);
+}
+#contact.current > .content > ul {
+    transform: translateX(0px);
+}
+#contact.leave > .content > ul {
+    transform: translateX(30px);
+}
+
+@media (max-width: 900px) {
+    #contact .content {
+        display: block;
+        width: auto;
+        padding: 0 10px;
+        margin-top: 30px;
+    }
+    #contact .content h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    #contact .content ul {
+        width: 230px;
+        margin: 0 auto;
+        text-align: left;
+        padding-left: 0;
+    }
+}
+
+
