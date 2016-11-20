@@ -6,7 +6,7 @@
 
 一个电商类网站的首页，使用模块化布局的思路，按照设计稿完成商城首页的结构和样式，并使用jQuery实现搜索切换、图片轮播、选项卡切换等功能。[预览](https://gordon8.github.io/project/mall)
 
-![截图](mall/img/screenshot.jpg)
+![截图](mall/img/screenshot.png)
 
 ## 2.门户类网站首页
 
