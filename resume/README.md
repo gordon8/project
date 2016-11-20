@@ -4,6 +4,8 @@
 个人展示页面，采用响应式布局的设计，同时使用了 HTML5 和 CSS3 的新特性。
 [预览](https://gordon8.github.io/project/resume)
 
+![截图](img/screenshot.png)
+
 ## 制作过程
 
 ### HTML结构部分
