@@ -9,4 +9,4 @@
 	}
 	$ret = array('status'=>'success', 'items'=>$items);
 	sleep(1);
-	echo $cb . '&&' . $cb . '(' . json_encode($ret) . ')';
+	echo json_encode($ret);
