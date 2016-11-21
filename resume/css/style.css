@@ -120,10 +120,13 @@ about ---------------------------- */
     height: 100px;
     border-radius: 50%;
 }
+#about .avatar:hover {
+    transform: scale(1.2);
+}
 #about .content {
     width: 600px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 50px;
     background: hsla(0, 100%, 100%, .25);
 }
 #about .content h1 {
@@ -132,6 +135,19 @@ about ---------------------------- */
 #about .content small,
 #about .content p {
     font-size: 16px;
+}
+#about .avatar,
+#about .content h1,
+#about .content small,
+#about .content p {
+    transition: all .3s ease-in;
+}
+
+#about .avatar:hover,
+#about .content h1:hover,
+#about .content small:hover,
+#about .content p:hover {
+    transform: scale(1.2);
 }
 
 @media (max-width: 900px) {
