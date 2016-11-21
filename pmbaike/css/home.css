@@ -273,50 +273,47 @@ nav ul li a:active {
 	width: 91px;
 	height: 30px;
 	text-align: center;
+	font: bold 1.2em/30px "Microsoft Yahei";
+	color: #333;
+	background: #e6e6e6;
 	border-right: 1px solid #dbdbdb;
 	border-bottom: 1px solid #dbdbdb;
+	cursor: pointer;
 }
 .news .nav li:last-child {
 	border-right: none;
 }
-.news .nav a {
-	display: block;
-	width: 91px;
-	font: bold 1.2em/30px "Microsoft Yahei";
-	color: #333;
-	background: #e6e6e6;
-}
-.news .nav a:link,
-.news .nav a:visit {
-    color: #333;
-    background: #e6e6e6;
-}
-.news .nav a:hover,
-.news .nav a:active,
-.news .nav .active {
+.news .nav li:hover,
+.news .nav li.active {
     color: #fff;
     background: #3991d0;
 }
-.news .title {
+.news .panel.active {
+	display: block;
 	padding: 10px;
 }
-.news .title a{
+.news .panel {
+	display: none;
+}
+.news .panel a{
 	display: block;
 	overflow: hidden;
 	width: 240px;
 	height: 28px;
 	padding-left: 15px;
 	border-bottom: 1px dotted #ccc;
+	text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;
 	line-height: 28px;
 	color: #333;
 	background: url(../img/newAirtl_icon.png) no-repeat 3px 50%;
 }
-.news .title a:link,
-.news .title a:visited {
+.news .panel a:link,
+.news .panel a:visited {
 	color: #333;
 }
-.news .title a:hover,
-.news .title a:active {
+.news .panel a:hover,
+.news .panel a:active {
 	color: #f60;
 }
 /* main end */
