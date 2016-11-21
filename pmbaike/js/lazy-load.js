@@ -28,9 +28,9 @@ define(function (require) {
 			this.dataReady = false;
 			var me = this;
 			var opts = {
-				url : 'http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/30-jquery%E7%BB%83%E4%B9%A0/code/getData.php',
+				url : 'js/php/getData.php',
 				type : 'GET',
-				dataType : 'jsonp',
+				dataType : 'json',
 				data : {
 					start : me.$loading.index(),
 					len : 3
