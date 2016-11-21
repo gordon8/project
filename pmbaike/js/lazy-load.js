@@ -28,9 +28,9 @@ define(function (require) {
 			this.dataReady = false;
 			var me = this;
 			var opts = {
-				url : 'js/php/getData.php',
+				url : 'https://gordon8.github.io/project/pmbaike/js/php/getDataJsonp.php',
 				type : 'GET',
-				dataType : 'json',
+				dataType : 'jsonp',
 				data : {
 					start : me.$loading.index(),
 					len : 3
@@ -46,7 +46,8 @@ define(function (require) {
 					}
 				},
 				error : function () {
-					alert('error');
+					//alert('error');
+					console.log(arguments);
 				},
 				complete : function () {
 					me.dataReady = true;

@@ -1,7 +1,7 @@
 <?php
 	$start = $_GET["start"];
 	$len = $_GET["len"];
-	//$cb = $_GET['callback'];
+	$cb = $_GET['callback'];
 	$items = array();
 
 	for ($i=0; $i < $len; $i++) { 
@@ -9,4 +9,4 @@
 	}
 	$ret = array("status"=>"success", "items"=>$items);
 	sleep(1);
-	echo json_encode($ret);
+	echo $cb . "&&" . $cb "(" . json_encode($ret) . ")";
