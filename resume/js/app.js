@@ -56,7 +56,7 @@
 
     //定义getCurrentIndex函数：获取当前的scrollTop值，并与sectionTopList中的值对比，确定目前的index
     function getCurrentIndex() {
-        var iTop = $('body').scrollTop();
+        var iTop = $('html, body').scrollTop();
         var eyePositon = iTop + $(window).height() / 2;
         var currentIndex = 0;
         for (var i = 0; i < sectionTopList.length; i++) {
