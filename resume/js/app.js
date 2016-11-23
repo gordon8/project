@@ -24,11 +24,22 @@
     //获取section列表
     var $sections = $page.find('>main>section');
     var sectionTopList = [];
-    $.each($sections, function (index, section) {
-        var $section = $(section);
-        var top = $section.offset().top;
-        sectionTopList[index] = top;
+    setSectionTopList();
+
+    $(window).on('resize', function () {
+        setSectionTopList();
     });
+
+    //定义函数为sectionTopList赋值
+
+    function setSectionTopList() {
+        $.each($sections, function (index, section) {
+            var $section = $(section);
+            var top = $section.offset().top;
+            sectionTopList[index] = top;
+        });
+    }
+
 
     //执行checkNav&addAnimation
     $(window).on('scroll', function () {
@@ -56,7 +67,7 @@
 
     //定义getCurrentIndex函数：获取当前的scrollTop值，并与sectionTopList中的值对比，确定目前的index
     function getCurrentIndex() {
-        var iTop = $('html, body').scrollTop();
+        var iTop = $(document).scrollTop();
         var eyePositon = iTop + $(window).height() / 2;
         var currentIndex = 0;
         for (var i = 0; i < sectionTopList.length; i++) {
